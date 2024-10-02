@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SIEU THI SO 4G\\Downloads\\CN-NET\\BT_capcha\\BT_capcha\\BT_capcha.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SIEU THI SO 4G\\Downloads\\CN-NET\\BT_capcha\\BT_capcha\\BT_capcha.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SIEU THI SO 4G\\Downloads\\CN-NET\\BT_capcha\\BT_capcha\\BT_capcha.csproj",
+        "projectName": "BT_capcha",
+        "projectPath": "C:\\Users\\SIEU THI SO 4G\\Downloads\\CN-NET\\BT_capcha\\BT_capcha\\BT_capcha.csproj",
+        "packagesPath": "C:\\Users\\SIEU THI SO 4G\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SIEU THI SO 4G\\Downloads\\CN-NET\\BT_capcha\\BT_capcha\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\SIEU THI SO 4G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net20"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net20": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net20": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

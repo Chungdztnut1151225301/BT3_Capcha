@@ -1,0 +1,7 @@
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\bin\BT_capcha.dll.config
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\bin\BT_capcha.dll
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\bin\BT_capcha.pdb
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\obj\Debug\BT_capcha.csproj.AssemblyReference.cache
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\obj\Debug\BT_capcha.csproj.CoreCompileInputs.cache
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\obj\Debug\BT_capcha.dll
+C:\Users\SIEU THI SO 4G\Downloads\CN-NET\BT_capcha\BT_capcha\obj\Debug\BT_capcha.pdb

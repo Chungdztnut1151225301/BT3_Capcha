@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page with Captcha</title>
+</head>
+<body>
+    <form id="loginForm">
+        <div>
+            <input type="text" id="txtUsername" placeholder="Username" />
+            <input type="password" id="txtPassword" placeholder="Password" />
+            <button type="button" onclick="login()">Login</button>
+
+            <!-- CAPTCHA chỉ hiện sau 3 lần đăng nhập sai -->
+            <img id="captchaImage" style="display:none;" />
+            <input type="text" id="txtCaptcha" placeholder="Enter CAPTCHA" style="display:none;" />
+            <button type="button" id="btnSubmitCaptcha" onclick="submitCaptcha()" style="display:none;">Submit</button>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var failedLoginAttempts = 0;
+
+        function login() {
+            var username = $('#txtUsername').val();
+            var password = $('#txtPassword').val();
+
+            $.ajax({
+                type: 'POST',
+                url: 'login.aspx/login',
+                data: JSON.stringify({ username: username, password: password }),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.d.success) {
+                        window.location.href = 'index.aspx';
+                    } else {
+                        failedLoginAttempts++;
+                        if (failedLoginAttempts >= 3) {
+                            showCaptcha();
+                        }
+                    }
+                }
+            });
+        }
+
+        function showCaptcha() {
+            $.ajax({
+                type: 'GET',
+                url: 'login.aspx/generateCaptcha',
+                success: function (response) {
+                    $('#captchaImage').attr('src', 'data:image/png;base64,' + response.d);
+                    $('#captchaImage').show();
+                    $('#txtCaptcha').show();
+                    $('#btnSubmitCaptcha').show();
+                }
+            });
+        }
+
+        function submitCaptcha() {
+            var captchaInput = $('#txtCaptcha').val();
+            $.ajax({
+                type: 'POST',
+                url: 'login.aspx/validateCaptcha',
+                data: JSON.stringify({ captcha: captchaInput }),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.d.success) {
+                        login();
+                    } else {
+                        alert('Captcha incorrect');
+                        showCaptcha();
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
